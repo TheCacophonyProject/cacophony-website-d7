@@ -1,0 +1,12 @@
+# Syncing the files directory: 
+
+# from Local TO Remote
+rsync -av /var/www/davelane_site/drupal7/sites/default/files/* root@walter.lane.net.nz:/var/www/davelane.nz/drupal7/sites/default/files/
+
+drush sql-sync @local @remote
+
+# from Remote TO Local
+rsync -av root@walter.lane.net.nz:/var/www/davelane.nz/drupal7/sites/default/files/* /var/www/davelane_site/drupal7/sites/default/files/
+
+drush sql-sync @remote @local
+
