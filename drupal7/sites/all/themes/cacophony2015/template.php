@@ -7,15 +7,17 @@
 function cacophony2015_preprocess_html(&$variables) {
   drupal_add_css('/sites/all/themes/cacophony2015/fonts/font-awesome/css/font-awesome.css', array('type' => 'file'));
   // add the Questrial (sans-serif) font
-  drupal_add_css('https://fonts.googleapis.com/css?family=Questrial:300,400,700,300italic,400italic,700italic&subset=latin', array('type' => 'external'));
+  drupal_add_css('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,300italic,400italic,700italic&subset=latin', array('type' => 'external'));
   // add the Playfair Display (serif) font
   drupal_add_css('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic&subset=latin', array('type' => 'external'));
-  // add the Libre Baskerville (serif) font
-  drupal_add_css('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic,700italic&subset=latin', array('type' => 'external'));
-  // add the Lato (sans-serif) font
-  drupal_add_css('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin', array('type' => 'external'));
-  // add the Droid Sans Mono font
-  drupal_add_css('https://fonts.googleapis.com/css?family=Droid+Sans+Mono:300,400,700,300italic,400italic,700italic&subset=latin', array('type' => 'external'));
+  if (0) {
+    // add the Libre Baskerville (serif) font
+    drupal_add_css('https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic,700italic&subset=latin', array('type' => 'external'));
+    // add the Lato (sans-serif) font
+    drupal_add_css('https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin', array('type' => 'external'));
+  }
+    // add the Droid Sans Mono font
+    drupal_add_css('https://fonts.googleapis.com/css?family=Droid+Sans+Mono:300,400,700,300italic,400italic,700italic&subset=latin', array('type' => 'external'));
 }
 
 /**
