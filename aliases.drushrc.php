@@ -26,10 +26,10 @@
  * Local d6 target alias
  * Set the root and site_path values to point to your local site
  */
-$aliases["d6"] = array (
-  'root' => '/var/www/public/drupal6',
-  'uri' => 'localhost/drupal6',
-  '#name' => 'd6',
+$aliases["dev"] = array (
+  'root' => '/var/www/site/drupal7',
+  'uri' => 'localhost',
+  '#name' => 'dev',
   'path-aliases' => 
   array (
     '%dump-dir' => '/tmp',
@@ -46,16 +46,16 @@ $aliases["d6"] = array (
         'password' => 'vagrant',
         'port' => '',
         'host' => 'localhost',
-        'database' => 'drupal6',
+        'database' => 'drupal7',
       ),
     ),
   ),
 );
 
-$aliases["d7"] = array (
-  'root' => '/var/www/public/drupal7',
-  'uri' => 'localhost/drupal7',
-  '#name' => 'd7',
+$aliases["prod"] = array (
+  'root' => '/var/www/cacophony.org.nz-d7/drupal7',
+  'uri' => 'cacophony.davelane.nz',
+  '#name' => 'prod',
   'path-aliases' => 
   array (
     '%dump-dir' => '/tmp',
@@ -67,11 +67,11 @@ $aliases["d7"] = array (
       'default' => 
       array (
         'driver' => 'mysql',
-        'username' => 'vagrant',
-        'password' => 'vagrant',
+        'username' => 'cacophony',
+        'password' => 'YdzY<Z"VL$3{',
         'port' => '',
         'host' => 'localhost',
-        'database' => 'drupal7',
+        'database' => 'cacophony',
         'prefix' => '',
       ),
     ),
