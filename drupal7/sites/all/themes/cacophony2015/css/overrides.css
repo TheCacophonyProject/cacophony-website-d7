@@ -1,47 +1,90 @@
-/** Custom CSS for openstandards.nz **/
-
-#navbar.navbar-inverse {
-  background-color: #ccc;
+/** Custom CSS for cacophony.org.nz **/
+h1 {
+  font-variant: small-caps;
 }
 
-#navbar.navbar-inverse .menu .leaf a {
+body {
+  background-color: red;
+}
+
+.btn {
+  font-size: 15px;
+}
+
+#navbar .container {
+  position: relative;
+}
+
+.navbar-nav, .region-navigation {
+  position: absolute;
+}
+
+.region-navigation {
+  top: 10px;
+}
+
+.navbar-nav {
+  bottom: 0px;
+  right: 0px;
+  margin-left: 390px;
+}
+
+.navbar-default {
+  border-color: #fff;
+}
+
+.navbar-default .navbar-nav.menu li a {
   color: #555;
+  font-size: 90%;
+  padding-bottom: 11px;
+  padding-top: 11px;
 }
 
-#navbar.navbar-inverse .menu .leaf:hover {
-  background-color: #ddd;
+.navbar-default .navbar-nav.menu li.active {
+  color: #000;
+  background-color: #eee;
 }
 
-#navbar.navbar-inverse .menu .leaf:hover a {
+.navbar-default .navbar-nav.menu li.active a.active {
   color: #000;
 }
 
-#navbar.navbar-inverse .menu .active-trail {
-  background-color: #bbb;
+.navbar-default .navbar-nav.menu li:hover {
+  background-color: #aaa;
 }
 
-#navbar.navbar-inverse .menu .active-trail a {
-  color: #222;
+.navbar-default .navbar-nav.menu li.open a, .navbar-default .navbar-nav.menu li:hover a, .navbar-nav.menu li.leaf a:hover {
+  color: #fff;
 }
 
+.navbar-default .navbar-nav.menu li.open a .dropdown-menu li a {
+  color: #555;
+}
 
-.page-header {
+.region-navigation {
+  right: 0px;
+}
+
+.region-navigation, #edit-search-block-form--2 {
+  float: right;
+}
+
+/* search form */
+#search-block-form, #edit-search-block-form--2 {
+  width: 300px;
+}
+
+/* login form */
+#user-login {
+  width: 300px;
+}
+
+/*.page-header {
   margin-top: 0px;
-}
+}*/
 
 #admin-menu, #admin-menu .dropdown {
   z-index: 1000;
-}
-
-.footer {
-  padding-top: 10px;
-  border-top: 1px solid #f8f5f0;
-  margin-top: 1em;
-  margin-bottom: 3em;
-}
-
-.footer #block-block-7 {
-  margin-bottom: 20px;
 }
 
 /*.sub-arrow {
@@ -86,7 +129,7 @@
 /** co-signers table **/
 .view-co-signers .views-table td.views-field-name {
   min-width: 9em;
-} 
+}
 
 .view-co-signers .views-table td.views-field-organisation {
   min-width: 10em;

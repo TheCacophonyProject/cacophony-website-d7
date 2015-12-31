@@ -1,0 +1,99 @@
+<?php
+
+/**
+ * @file
+ * template.php
+ */
+function openstds2015_preprocess_html(&$variables) {
+  drupal_add_css('/sites/all/themes/openstds2015/fonts/font-awesome/css/font-awesome.css', array('type' => 'file'));
+  // add the lovely Lato font
+  drupal_add_css('https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic&subset=latin', array('type' => 'external'));
+}
+
+/**
+ * Overrides theme_menu_link().
+ *
+ * from https://www.drupal.org/node/1893532#comment-9791787
+ * and https://github.com/CWSpear/bootstrap-hover-dropdown
+ */
+function openstds2015_menu_link(array $variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+
+  if ($element['#below']) {
+    // Prevent dropdown functions from being added to management menu so it
+    // does not affect the navbar module.
+    if (($element['#original_link']['menu_name'] == 'management') && (module_exists('navbar'))) {
+      $sub_menu = drupal_render($element['#below']);
+    }
+    elseif ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] == 1)) {
+      // Add our own wrapper.
+      unset($element['#below']['#theme_wrappers']);
+      $sub_menu = '<ul class="dropdown-menu">' . drupal_render($element['#below']) . '</ul>';
+      // Generate as standard dropdown.
+      $element['#title'] .= ' <span class="caret"></span>';
+      $element['#attributes']['class'][] = 'dropdown';
+      $element['#localized_options']['html'] = TRUE;
+
+      // Set dropdown trigger element to # to prevent inadvertant page loading
+      // when a submenu link is clicked.
+      $element['#localized_options']['attributes']['data-target'] = '#';
+      $element['#localized_options']['attributes']['class'][] = 'dropdown-toggle';
+      $element['#localized_options']['attributes']['data-toggle'] = 'dropdown';
+      // add dropdown hover support
+      $element['#localized_options']['attributes']['data-hover'] = 'dropdown';
+      // make first level menu clickable
+      $element['#localized_options']['attributes']['class'][] = 'disabled';
+    }
+  }
+  // On primary navigation menu, class 'active' is not set on active menu item.
+  // @see https://drupal.org/node/1896674
+  if (($element['#href'] == $_GET['q'] || ($element['#href'] == '<front>' && drupal_is_front_page())) && (empty($element['#localized_options']['language']))) {
+    $element['#attributes']['class'][] = 'active';
+  }
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+
+
+ /**
+  * Overrides theme_menu_link().
+  */
+if (0) {
+function openstds2015_menu_link(array $variables) {
+  $element = $variables['element'];
+  $sub_menu = '';
+
+  if ($element['#below']) {
+    // Prevent dropdown functions from being added to management menu so it
+    // does not affect the navbar module.
+    if (($element['#original_link']['menu_name'] == 'management') && (module_exists('navbar'))) {
+     $sub_menu = drupal_render($element['#below']);
+    }
+    //Here we need to change from ==1 to >=1 to allow for multilevel submenus
+    elseif ((!empty($element['#original_link']['depth'])) && ($element['#original_link']['depth'] >= 1)) {
+      // Add our own wrapper.
+      unset($element['#below']['#theme_wrappers']);
+      $sub_menu = '<ul class="dropdown-menu">' . drupal_render($element['#below']) . '</ul>';
+      // Generate as standard dropdown.
+      //$element['#title'] .= ' <span class="caret"></span>'; Smartmenus plugin add's caret
+      $element['#attributes']['class'][] = 'dropdown';
+      $element['#localized_options']['html'] = TRUE;
+
+      // Set dropdown trigger element to # to prevent inadvertant page loading
+      // when a submenu link is clicked.
+      $element['#localized_options']['attributes']['data-target'] = '#';
+      $element['#localized_options']['attributes']['class'][] = 'dropdown-toggle';
+      //comment element bellow if you want your parent menu links to be "clickable"
+      //$element['#localized_options']['attributes']['data-toggle'] = 'dropdown';
+    }
+  }
+  // On primary navigation menu, class 'active' is not set on active menu item.
+  // @see https://drupal.org/node/1896674
+  if (($element['#href'] == $_GET['q'] || ($element['#href'] == '<front>' && drupal_is_front_page())) && (empty($element['#localized_options']['language']))) {
+    $element['#attributes']['class'][] = 'active';
+  }
+  $output = l($element['#title'], $element['#href'], $element['#localized_options']);
+  return '<li' . drupal_attributes($element['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
+}
+}
