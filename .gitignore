@@ -7,6 +7,9 @@ files/
 sites/*/files
 sites/*/private
 
+# Sass/Node.js related scaffolding stuff
+node_modules
+
 # Ignore default text files
 robots.txt
 /CHANGELOG.txt
