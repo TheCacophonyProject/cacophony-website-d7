@@ -27,8 +27,6 @@ regions[page_bottom]    = 'Page bottom'
 
 stylesheets[all][] = css/styles.css
 stylesheets[all][] = css/overrides.css
-stylesheets[all][] = css/unrolled.css
-;stylesheets[all][] = css/bootstrap/jquery.smartmenus.bootstrap.css
 stylesheets[all][] = fonts/font-awesome/css/font-awesome.css
 
 ; For information on choosing the desired method, please read the Drupal
@@ -58,15 +56,3 @@ scripts[] = 'js/bootstrap/transition.js'
 ;scripts[] = 'js/jquery.smartmenus.js'
 ;scripts[] = 'js/bootstrap/jquery.smartmenus.bootstrap.js'
 scripts[] = 'js/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js'
-
-; ; Disable BootstrapCDN if using Bootstrap source files in your sub-theme.
-settings[bootstrap_cdn] = ''
-
-
-; ;-------------------------
-; ; METHOD 2: Bootstrap CDN
-; ;-------------------------
-;
-; Method 2 uses BootstrapCDN, the only thing you might need to provide here
-; is overrides to Bootstrap theme settings. Copy them here from the base theme
-; to override.
