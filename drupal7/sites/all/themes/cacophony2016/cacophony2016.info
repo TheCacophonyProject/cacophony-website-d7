@@ -34,6 +34,9 @@ stylesheets[all][] = css/STARTER.css
 stylesheets[all][] = css/normalize.css
 stylesheets[all][] = css/foundation.min.css
 
+stylesheets[all][] = css/overrides.css
+
+
 ; Foundation JavaScript.
 
 ; External libraries used by Foundation (minified). Add more via Gruntfile.js.

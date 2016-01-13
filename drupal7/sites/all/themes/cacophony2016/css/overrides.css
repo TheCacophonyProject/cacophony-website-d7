@@ -1,0 +1,313 @@
+/** Custom CSS for cacophony.org.nz **/
+
+/* admin menu-related */
+#admin-menu, #admin-menu .dropdown { font-size: 0.7rem; }
+#admin-menu, #admin-menu .dropdown { z-index: 1000; }
+
+
+/* logged in tabs */
+.main .button-group > li { margin: 0 4px; }
+
+/* old styles */
+
+h1 { font-variant: small-caps; }
+/*body {
+  background-color: #fff;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}*/
+
+/*.btn { font-size: 15px; }*/
+
+/*#navbar .container { position: relative; }
+.navbar-nav, .region-navigation { position: absolute; }
+.region-navigation { top: 10px; }
+.navbar-nav {
+  bottom: 0px;
+  right: 0px;
+  margin-left: 390px;
+}
+.navbar-default { border-color: #fff; }
+.navbar-default .navbar-nav.menu li a {
+  color: #555;
+  font-size: 90%;
+  padding-bottom: 11px;
+  padding-top: 11px;
+}
+.navbar-default .navbar-nav.menu li.active { color: #000; background-color: #eee; }
+.navbar-default .navbar-nav.menu li.active a.active { color: #000; }
+.navbar-default .navbar-nav.menu li:hover { background-color: #aaa; }
+.navbar-default .navbar-nav.menu li.open a, .navbar-default .navbar-nav.menu li:hover a, .navbar-nav.menu li.leaf a:hover { color: #fff; }
+.navbar-default .navbar-nav.menu li.open a .dropdown-menu li a { color: #555; }
+.region-navigation { right: 0px; }
+.region-navigation, #edit-search-block-form--2 { float: right; }
+*/
+
+/* search form */
+/*#search-block-form, #edit-search-block-form--2 { width: 300px; }*/
+
+/* login form */
+/* #user-login { width: 300px; }*/
+
+/* Full-width section-specific styles */
+html, body { overflow-x: hidden; }
+body > section:not(#menu):not(.hero):not(#footer-container) { padding: 30px 0 40px; }
+/*section {
+  margin: 0 auto;
+}*/
+#the-cacophony-project { background-color: #7ac142; }
+#listening-here { background-color: #ececec; }
+/*.row.full { width: 100%; }
+.page .row.l-main { max-width: initial; }
+.main.columns { padding: 0px; }
+.full-width {
+   width: 100%;
+   margin-left: auto;
+   margin-right: auto;
+   max-width: initial;
+}*/
+
+/*section {
+  position: relative;
+  background-color: blue;
+}
+
+section:before, section:after {
+  position: absolute;
+  background-color: green;
+  top: 0;
+  bottom: 0;
+  width: 9999px;
+}
+
+section:before { right: 100%; }
+section:after { left: 100%; } */
+
+
+section .row img { float: left; }
+.green {
+  background-color: #7ac142 !important;
+  color: #fff;
+}
+.gray {
+  background-color: #e5e5e5 !important;
+}
+
+/* specific section styles */
+#first-project img { float: right; }
+
+/* hero title text */
+/*.hero { background-color: blue; }*/
+.hero {
+  background-image: url("../img/hero-large.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #fff;
+}
+.hero-text , .main-container .row {
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 10rem;
+  text-align: center;
+}
+.hero h1, .body .hero .row h1.page-header {
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 6px;
+  line-height: 1.375;
+  margin: 2rem 0;
+  text-transform: uppercase;
+}
+#subpage-hero {
+  padding-bottom: 9rem;
+}
+
+/* Team page */
+.team-header { background-image: url("../img/hero-theory.jpg"); }
+
+/* About/Friends page */
+.about-header { background-image: url("../img/hero-about.jpg"); }
+
+/* Help page */
+.help-header { background-image: url("../img/hero-help.jpg"); }
+
+/* Project page */
+.project-header { background-image: url("../img/hero-projects.jpg"); }
+#the-cacophony-project #opening-copy { padding-left: 1.5rem; }
+#project-nav { background: #e5e5e5 none repeat scroll 0 0; padding: 0.6rem 0 !important; }
+
+/*.page-header {
+  margin-top: 0px;
+}*/
+
+/* new CSS */
+/*#navbar .container {
+  position: relative;
+}
+
+#navbar .navbar-nav, #navbar .region-navigation {
+  position: absolute;
+  bottom: 0px;
+}
+
+#navbar .navbar-nav {
+  left: 240px;
+}
+
+#navbar .navbar-default {
+  border-color: #fff;
+}
+
+#navbar .navbar-nav.secondary {
+  display: none;
+}
+
+#navbar .region-navigation .menu.nav {
+  float: right;
+  width: 300px;
+  right: 0px;
+  top: 0px;
+  font-size: 80%;
+  padding: 4px 12px;
+}
+
+#navbar .navbar-default .navbar-nav.menu li a {
+  padding-bottom: 11px;
+  padding-top: 11px;
+}
+
+#navbar .menu li.active {
+  color: #000;
+  background-color: #eee;
+}
+
+#navbar .menu li.active a.active {
+  color: #000;
+}
+
+#navbar .menu li:hover, #block-system-user-menu .menu li:hover,
+#navbar .menu li a:hover, #navbar .menu li a:focus {
+  background-color: #aaa;
+}
+
+#navbar .menu li:hover a, #navbar .menu li.leaf a:hover {
+  color: #fff;
+}
+*/
+
+/*#block-system-user-menu, #block-menu-menu-login-menu {
+  position: absolute;
+  right: 6px;
+  top: -100px;
+} */
+
+#block-system-user-menu h2, #block-menu-menu-login-menu h2 { display: none; }
+#block-system-user-menu li, #block-menu-menu-login-menu li { float: right; }
+#navbar .region-navigation { right: 0px; }
+#navbar .region-navigation, #edit-search-block-form--2 { float: right; }
+
+/* search form */
+#search-block-form {
+  position: absolute;
+  right: 57px;
+  bottom: 0;
+}
+#search-block-form, #edit-search-block-form--2 { width: 14em; }
+
+/* login form */
+#user-login { width: 300px; }
+
+/* footer stuff */
+#footer-container { padding: 35px 0 20px; }
+#footer-container { background: #555555 none repeat scroll 0 0; }
+
+/*.sub-arrow {
+  display: none;
+}*/
+
+/* legal list stuff */
+
+#legal-list { counter-reset: section; }
+#legal-list h2:before {
+  counter-increment: section;
+  content: counter(section) ". ";
+  margin: 0 0.5em 0 0;
+}
+#legal-list ol {
+  counter-reset: clause;
+  list-style: none outside none;
+  text-indent: -2em;
+}
+#legal-list ol li { counter-increment: clause; }
+#legal-list ol li:before {
+  content: counter(section) "." counters(clause, ".") ". ";
+  margin: 0 0.5em 0 0;
+}
+
+/* Forms */
+/*.node-type-webform .webform-client-form .form-item {
+  margin-top: 16px;
+  margin-bottom:6px;
+}
+.node-type-webform .webform-client-form .form-item .description {
+  color: #888;
+}
+.node-type-webform .webform-client-form .form-item .form-radios {
+  padding-left: 20px;
+} */
+
+/*=========================
+  Icons - see http://bootsnipp.com/snippets/featured/spinning-social-icons
+ ================= */
+
+/* footer social icons */
+ul.social-network, ul.credits {
+	list-style: none;
+	display: inline;
+	margin-left:0 !important;
+	padding: 0;
+}
+ul.social-network li, ul.credits li {
+	display: inline;
+	margin: 0 5px;
+}
+
+.footer ul.credits li, .footer ul.social-network li {
+  vertical-align: bottom;
+}
+
+.footer .row .footer-block {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.region-sidebar-second .block:first-child {
+  margin-top: 71px;
+}
+
+.view-display-id-block_1 .view-header {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #f8f5f0;
+  margin-bottom: 10px;
+}
+
+/* front page blocks */
+.region-sidebar-second .block-title {
+  font-size: 80%;
+  font-style: italic;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #f8f5f0;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.region-sidebar-second .node-teaser h2 {
+  margin-top: 0;
+  margin-bottom: 6px;
+  line-height: 0.8;
+}
+
+.region-sidebar-second .node-teaser h2 a {
+  font-size: 60%;
+}
