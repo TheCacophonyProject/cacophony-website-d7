@@ -142,7 +142,7 @@
         <?php print render($tabs); ?>
       <?php endif; ?>
       <?php if (!empty($page['highlighted'])): ?>
-        <div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div>
+        <div class="highlighted-wrapper"><div class="highlighted jumbotron"><?php print render($page['highlighted']); ?></div></div>
       <?php endif; ?>
       <?php if (!empty($breadcrumb)): print $breadcrumb; endif;?>
       <a id="main-content"></a>

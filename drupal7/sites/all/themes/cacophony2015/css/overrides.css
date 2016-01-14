@@ -1,6 +1,11 @@
 /** Custom CSS for cacophony.org.nz **/
-h1 { font-variant: small-caps; }
+/* generic styles */
 body { background-color: #fff;}
+h1 {
+  text-transform: uppercase;
+}
+
+/* navigation */
 .btn { font-size: 15px; }
 #navbar .container { position: relative; }
 .navbar-nav, .region-navigation { position: absolute; }
@@ -12,7 +17,6 @@ body { background-color: #fff;}
 }
 .navbar-default { border-color: #fff; }
 .navbar-default .navbar-nav.menu li a {
-  /*color: #555;*/
   font-size: 90%;
   padding-bottom: 11px;
   padding-top: 11px;
@@ -37,53 +41,43 @@ body { background-color: #fff;}
 #user-login { width: 300px; }
 
 /* Section-specific styles */
-body > section:not(#menu):not(.hero):not(#footer-container) { padding: 30px 0 40px; }
+/*body > section:not(#menu):not(.hero):not(#footer-container) { padding: 30px 0 40px; }*/
+
+/* images on front page */
+section img { float: left; }
+.green { background-color: #7ac142 !important; }
+.gray { background-color: #e5e5e5 !important; }
 #the-cacophony-project { background-color: #7ac142; }
 #listening-here { background-color: #ececec; }
-/*section:before, section:after {
-  position: absolute;
-  background-color: green;
-  top: 0;
-  bottom: 0;
-  width: 9999px;
-}
-
-section:before { right: 100%; }
-section:after { left: 100%; } */
-
-/*.row {
-  margin: 0 auto;
-  max-width: 62.5rem;
-  width: 100%;
-}*/
-
-section img {
-  float: left;
-}
-
-.green {
-  background-color: #7ac142 !important;
-}
-.gray {
-  background-color: #e5e5e5 !important;
-}
-
-#first-project img {
-  float: right;
-}
+#first-project img { float: right; }
 
 /* full width hero title text */
-.main-container { overflow-x: hidden;}
+.main-container {
+  overflow-x: hidden;
+}
+.main-container .row {
+  /*padding: 0 1000px;
+  margin: 0 -1000px;*/
+  margin: 0;
+  padding: 0;
+}
 .main-container .row .highlighted.jumbotron {
   padding: 0 1000px 0 1000px;
   margin: 0 -1000px 0 -1000px;
-  min-height: 300px;
+/*  min-height: 300px;*/
   background-image: url("../img/hero-large.jpg");
   background-position: center center;
   background-repeat: no-repeat;
-  background-color: green;
-
+  background-color: red;
 }
+.jumbotron {
+  padding: 0;
+}
+.jumbotron h1 {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
 /*.hero, .main-container .row {
   background-image: url("../img/hero-large.jpg");
   background-position: center center;
@@ -94,48 +88,50 @@ section img {
 
 /* full width hero title text */
 .hero {
+  text-align: center;
+  padding: 0 1000px 0 1000px;
+  margin: 0 -1000px 0 -1000px;
+}
+.hero .title-wrapper {
   background-color: rgba(0, 0, 0, 0.5);
   margin-bottom: 10rem;
-  text-align: center;
+  padding: 2rem 0;
 }
-
-.hero h2 {
+.hero h1 {
   color: #fff;
-  font-weight: 600;
   letter-spacing: 6px;
   line-height: 1.375;
-  margin: 2rem 0;
-  text-transform: uppercase;
 }
+.hero p { display: none; }
 
 #subpage-hero {
   padding-bottom: 9rem;
 }
 
 /* Team page */
-.team-header {
-  background-image: url("../img/hero-theory.jpg");
-}
-
+.team-header { background-image: url("../img/hero-theory.jpg"); }
 /* About/Friends page */
-.about-header {
-  background-image: url("../img/hero-about.jpg");
-}
-
+.about-header { background-image: url("../img/hero-about.jpg"); }
 /* Help page */
-.help-header {
-  background-image: url("../img/hero-help.jpg");
-}
-
+.help-header { background-image: url("../img/hero-help.jpg"); }
 /* Project page */
-.project-header {
-  background-image: url("../img/hero-projects.jpg");
+.project-header { background-image: url("../img/hero-projects.jpg"); }
+#the-cacophony-project #opening-copy { padding-left: 1.5rem; }
+#block-block-10 #player {
+  float: left;
+  position: relative;
+  padding: 0 0.9375rem;
 }
-
-#the-cacophony-project #opening-copy {
-  padding-left: 1.5rem;
+#player {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
-
+#player h2 {
+  color: #fff;
+  padding: 0.6rem 0;
+  margin: 0;
+  font-weight: 700;
+}
 #project-nav {
   background: #e5e5e5 none repeat scroll 0 0;
   padding: 0.6rem 0 !important;
