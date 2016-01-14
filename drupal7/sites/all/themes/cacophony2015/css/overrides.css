@@ -1,102 +1,46 @@
 /** Custom CSS for cacophony.org.nz **/
-h1 {
-  font-variant: small-caps;
-}
-
-body {
-  background-color: #fff;
-}
-
-.btn {
-  font-size: 15px;
-}
-
-#navbar .container {
-  position: relative;
-}
-
-.navbar-nav, .region-navigation {
-  position: absolute;
-}
-
-.region-navigation {
-  top: 10px;
-}
-
+h1 { font-variant: small-caps; }
+body { background-color: #fff;}
+.btn { font-size: 15px; }
+#navbar .container { position: relative; }
+.navbar-nav, .region-navigation { position: absolute; }
+.region-navigation { top: 10px; }
 .navbar-nav {
   bottom: 0px;
   right: 0px;
   margin-left: 390px;
 }
-
-.navbar-default {
-  border-color: #fff;
-}
-
+.navbar-default { border-color: #fff; }
 .navbar-default .navbar-nav.menu li a {
-  color: #555;
+  /*color: #555;*/
   font-size: 90%;
   padding-bottom: 11px;
   padding-top: 11px;
 }
-
 .navbar-default .navbar-nav.menu li.active {
   color: #000;
   background-color: #eee;
 }
-
-.navbar-default .navbar-nav.menu li.active a.active {
-  color: #000;
-}
-
-.navbar-default .navbar-nav.menu li:hover {
-  background-color: #aaa;
-}
-
+.navbar-default .navbar-nav.menu li.active a.active { color: #000; }
+.navbar-default .navbar-nav.menu li:hover { background-color: #aaa; }
 .navbar-default .navbar-nav.menu li.open a, .navbar-default .navbar-nav.menu li:hover a, .navbar-nav.menu li.leaf a:hover {
   color: #fff;
 }
-
-.navbar-default .navbar-nav.menu li.open a .dropdown-menu li a {
-  color: #555;
-}
-
-.region-navigation {
-  right: 0px;
-}
-
-.region-navigation, #edit-search-block-form--2 {
-  float: right;
-}
+.navbar-default .navbar-nav.menu li.open a .dropdown-menu li a { color: #555; }
+.region-navigation { right: 0px; }
 
 /* search form */
-#search-block-form, #edit-search-block-form--2 {
-  width: 300px;
-}
+.region-navigation, #edit-search-block-form--2 { float: right; }
+#search-block-form, #edit-search-block-form--2 { width: 300px; }
 
 /* login form */
-#user-login {
-  width: 300px;
-}
+#user-login { width: 300px; }
 
 /* Section-specific styles */
-
-body > section:not(#menu):not(.hero):not(#footer-container) {
-  padding: 30px 0 40px;
-}
-#the-cacophony-project {
-  background-color: #7ac142;
-}
-#listening-here {
-  background-color: #ececec;
-}
-
-/*section {
-  position: relative;
-  background-color: blue;
-}
-
-section:before, section:after {
+body > section:not(#menu):not(.hero):not(#footer-container) { padding: 30px 0 40px; }
+#the-cacophony-project { background-color: #7ac142; }
+#listening-here { background-color: #ececec; }
+/*section:before, section:after {
   position: absolute;
   background-color: green;
   top: 0;
@@ -128,24 +72,35 @@ section img {
   float: right;
 }
 
-/* hero title text */
+/* full width hero title text */
+.main-container { overflow-x: hidden;}
+.main-container .row .highlighted.jumbotron {
+  padding: 0 1000px 0 1000px;
+  margin: 0 -1000px 0 -1000px;
+  min-height: 300px;
+  background-image: url("../img/hero-large.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: green;
 
-.hero, .main-container .row {
-  background-image: url("img/hero-large.jpg");
+}
+/*.hero, .main-container .row {
+  background-image: url("../img/hero-large.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #fff;
-}
+}*/
 
-.hero-text , .main-container .row {
+/* full width hero title text */
+.hero {
   background-color: rgba(0, 0, 0, 0.5);
   margin-bottom: 10rem;
   text-align: center;
 }
 
-.hero h1, .main-container .row h1.page-header {
-  color: #ffffff;
+.hero h2 {
+  color: #fff;
   font-weight: 600;
   letter-spacing: 6px;
   line-height: 1.375;
@@ -159,22 +114,22 @@ section img {
 
 /* Team page */
 .team-header {
-  background-image: url("img/hero-theory.jpg");
+  background-image: url("../img/hero-theory.jpg");
 }
 
 /* About/Friends page */
 .about-header {
-  background-image: url("img/hero-about.jpg");
+  background-image: url("../img/hero-about.jpg");
 }
 
 /* Help page */
 .help-header {
-  background-image: url("img/hero-help.jpg");
+  background-image: url("../img/hero-help.jpg");
 }
 
 /* Project page */
 .project-header {
-  background-image: url("img/hero-projects.jpg");
+  background-image: url("../img/hero-projects.jpg");
 }
 
 #the-cacophony-project #opening-copy {
@@ -186,9 +141,9 @@ section img {
   padding: 0.6rem 0 !important;
 }
 
-/*.page-header {
-  margin-top: 0px;
-}*/
+.page-header {
+  margin-top: 22px;
+}
 
 #admin-menu, #admin-menu .dropdown {
   z-index: 1000;
@@ -208,14 +163,8 @@ section img {
   left: 240px;
 }
 
-#navbar .navbar-default {
-  border-color: #fff;
-}
-
-#navbar .navbar-nav.secondary {
-  display: none;
-}
-
+#navbar .navbar-default { border-color: #fff; }
+#navbar .navbar-nav.secondary { display: none;}
 #navbar .region-navigation .menu.nav {
   float: right;
   width: 300px;
@@ -224,52 +173,28 @@ section img {
   font-size: 80%;
   padding: 4px 12px;
 }
-
 #navbar .navbar-default .navbar-nav.menu li a {
   padding-bottom: 11px;
   padding-top: 11px;
 }
-
 #navbar .menu li.active {
   color: #000;
   background-color: #eee;
 }
-
-#navbar .menu li.active a.active {
-  color: #000;
-}
-
+#navbar .menu li.active a.active { color: #000; }
 #navbar .menu li:hover, #block-system-user-menu .menu li:hover,
-#navbar .menu li a:hover, #navbar .menu li a:focus {
-  background-color: #aaa;
-}
-
-#navbar .menu li:hover a, #navbar .menu li.leaf a:hover {
-  color: #fff;
-}
-
+#navbar .menu li a:hover, #navbar .menu li a:focus { background-color: #aaa; }
+#navbar .menu li:hover a, #navbar .menu li.leaf a:hover { color: #fff; }
 #block-system-user-menu, #block-menu-menu-login-menu {
   /*float: right;*/
   position: absolute;
   right: 6px;
   top: -100px;
 }
-
-#block-system-user-menu h2, #block-menu-menu-login-menu h2 {
-  display: none;
-}
-
-#block-system-user-menu li, #block-menu-menu-login-menu li {
-  float: right;
-}
-
-#navbar .region-navigation {
-  right: 0px;
-}
-
-#navbar .region-navigation, #edit-search-block-form--2 {
-  float: right;
-}
+#block-system-user-menu h2, #block-menu-menu-login-menu h2 { display: none; }
+#block-system-user-menu li, #block-menu-menu-login-menu li { float: right; }
+#navbar .region-navigation { right: 0px; }
+#navbar .region-navigation, #edit-search-block-form--2 { float: right; }
 
 /* search form */
 #search-block-form {
@@ -277,33 +202,17 @@ section img {
   right: 57px;
   bottom: 0;
 }
-
-#search-block-form, #edit-search-block-form--2 {
-  width: 14em;
-}
+#search-block-form, #edit-search-block-form--2 { width: 14em; }
 
 /* login form */
-#user-login {
-  width: 300px;
-}
+#user-login { width: 300px; }
 
 /* footer stuff */
-#footer-container {
-  padding: 35px 0 20px;
-}
-#footer-container {
-  background: #555555 none repeat scroll 0 0;
-}
-
-/*.sub-arrow {
-  display: none;
-}*/
+#footer-container { padding: 35px 0 20px; }
+#footer-container { background: #555555 none repeat scroll 0 0; }
 
 /* legal list stuff */
-
-#legal-list {
-  counter-reset: section;
-}
+#legal-list { counter-reset: section; }
 #legal-list h2:before {
   counter-increment: section;
   content: counter(section) ". ";
@@ -314,9 +223,7 @@ section img {
   list-style: none outside none;
   text-indent: -2em;
 }
-#legal-list ol li {
-  counter-increment: clause;
-}
+#legal-list ol li { counter-increment: clause; }
 #legal-list ol li:before {
   content: counter(section) "." counters(clause, ".") ". ";
   margin: 0 0.5em 0 0;
