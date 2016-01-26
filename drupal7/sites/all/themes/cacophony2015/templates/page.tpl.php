@@ -172,5 +172,7 @@
   </div>
 </div>
 <footer class="footer container">
-  <?php print render($page['footer']); ?>
+  <section class="fullwidth">
+    <?php print render($page['footer']); ?>
+  </section>
 </footer>
