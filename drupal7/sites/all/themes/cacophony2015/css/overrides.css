@@ -1,58 +1,196 @@
-/** Custom CSS for openstandards.nz **/
+/** Custom CSS for cacophony.org.nz **/
+/* generic styles */
 
-#navbar.navbar-inverse {
-  background-color: #ccc;
+body {
+  overflow-x: hidden;
+}
+h1 {
+  font-variant: small-caps;
+  text-transform: uppercase;
+}
+a:hover { text-decoration: none; }
+
+/* standard Drupal stuff */
+.alert { margin-top: 22px; }
+.links { margin-top: 22px; }
+.field-type-addthis { margin: 22px 22px 0 0; }
+.field-name-body p { margin-top: 22px; }
+
+/* images on front page */
+section.fullwidth {
+  padding: 30px 1000px 30px 1000px;
+  margin: 0 -1000px 0 -1000px;
+}
+/*section img { float: left; }*/
+.green { background-color: #7ac142 !important; }
+.green a { color: #fff; }
+.green a:hover { color: #000; }
+.gray { background-color: #e5e5e5 !important; }
+.gray a { color: #085C13; }
+.gray a:hover { color: #08360E; }
+#the-cacophony-project {
+  background-color: #7ac142;
+}
+#the-cacophony-project #opening-copy {
+  color: #fff;
+  margin-left: 24px;
+}
+#listening-here { background-color: #ececec; }
+/*#first-project img { float: right; }*/
+
+/* fix for Ckeditor */
+.cke_editable_themed .fullwidth {
+  padding: 6px 24px;
+  margin: 0;
+}
+/* full width hero title text */
+.main-container .hero {
+  background-image: url("../img/hero-large.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  position: relative;
+  height: 371px;
+}
+/* shift title down over hero image */
+/* page-specific styles */
+.front .hero { background-image: url("../img/hero-large.jpg"); }
+/* People page */
+.page-node-49 .hero { background-image: url("../img/hero-theory.jpg"); height: 362px; }
+/* Cacophonometer page */
+.page-node-50 .hero { background-image: url("../img/hero-help.jpg"); height: 360px; }
+/* Join the Project page */
+.page-node-51 .hero { background-image: url("../img/hero-projects.jpg"); height: 355px; }
+/* contact page */
+.page-contact .hero { background-image: url("../img/hero-about.jpg"); height: 355px; }
+#contact-site-form {
+  margin: 24px 0;
 }
 
-#navbar.navbar-inverse .menu .leaf a {
-  color: #555;
+h1.page-header {
+  color: #fff;
+  font-weight: 400;
+  font-size: 4.25rem;
+  fount-style: normal;
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 10rem;
+  padding: 2rem 0;
+  text-align: center;
+  padding: 26px 1000px 0 1000px;
+  margin: 0 -1000px 0 -1000px;
+  letter-spacing: 6px;
+  line-height: 1.375;
+  position: absolute;
+  min-height: 113px;
+  z-index: 1000;
+  border-bottom: none;
 }
 
-#navbar.navbar-inverse .menu .leaf:hover {
-  background-color: #ddd;
+/* front page player */
+.player {
+  position: absolute;
+  bottom: 0px;
 }
-
-#navbar.navbar-inverse .menu .leaf:hover a {
-  color: #000;
+#player {
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 20px 85px 0 85px;
+  float: left;
 }
-
-#navbar.navbar-inverse .menu .active-trail {
-  background-color: #bbb;
-}
-
-#navbar.navbar-inverse .menu .active-trail a {
-  color: #222;
-}
-
-
-.page-header {
-  margin-top: 0px;
+#player h2 {
+  color: #fff;
+  padding: 0.6rem 0;
+  margin: 0;
+  font-weight: 700;
 }
 
 #admin-menu, #admin-menu .dropdown {
   z-index: 1000;
 }
 
+/* Main Navigation */
+#navbar .container {
+  position: relative;
+  margin-top: 0px;
+}
+#navbar .navbar-nav, #navbar .region-navigation {
+  position: absolute;
+  bottom: 0px;
+}
+#navbar .navbar-nav {
+  right: 0px;
+}
+#navbar.navbar-default { border-color: #fff; }
+#navbar .navbar-nav.secondary { display: none;}
+#navbar .region-navigation .menu.nav {
+  float: right;
+  width: 300px;
+  right: 0px;
+  top: 0px;
+  font-size: 80%;
+  padding: 4px 12px;
+}
+#navbar .navbar-default .navbar-nav.menu li a {
+  padding-bottom: 11px;
+  padding-top: 11px;
+}
+#navbar .menu li.active {
+  color: #000;
+  background-color: #eee;
+}
+#navbar .menu li.active a.active { color: #000; }
+#navbar .menu li:hover, #block-system-user-menu .menu li:hover,
+#navbar .menu li a:hover, #navbar .menu li a:focus { background-color: #aaa; }
+#navbar .menu li:hover a, #navbar .menu li.leaf a:hover { color: #fff; }
+#block-system-user-menu, #block-menu-menu-login-menu {
+  position: absolute;
+  right: 6px;
+  top: -100px;
+}
+
+#block-system-user-menu h2, #block-menu-menu-login-menu h2 { display: none; }
+#block-system-user-menu li, #block-menu-menu-login-menu li { float: right; }
+#navbar .region-navigation { right: 0px; }
+#navbar .region-navigation, #edit-search-block-form--2 { float: right; }
+
+/* search form */
+#search-block-form {
+  position: absolute;
+  right: 57px;
+  bottom: 0;
+}
+#search-block-form, #edit-search-block-form--2 { width: 14em; }
+
+/* login form */
+#user-login { width: 300px; }
+
+/* footer stuff */
 .footer {
-  padding-top: 10px;
-  border-top: 1px solid #f8f5f0;
-  margin-top: 1em;
-  margin-bottom: 3em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  border-top: none;
+}
+.footer section.fullwidth {
+  background-color: #555;
+  height: auto;
+  min-height: 200px;
+}
+.footer ul {
+  list-style: none;
+}
+.footer ul li {
+  float: right;
 }
 
-.footer #block-block-7 {
-  margin-bottom: 20px;
-}
 
-/*.sub-arrow {
-  display: none;
-}*/
+/*#footer-container { padding: 35px 0 20px; }
+#footer-container { background: #555555 none repeat scroll 0 0; }
+*/
 
 /* legal list stuff */
-
-#legal-list {
-  counter-reset: section;
-}
+/*#legal-list { counter-reset: section; }
 #legal-list h2:before {
   counter-increment: section;
   content: counter(section) ". ";
@@ -63,38 +201,12 @@
   list-style: none outside none;
   text-indent: -2em;
 }
-#legal-list ol li {
-  counter-increment: clause;
-}
+#legal-list ol li { counter-increment: clause; }
 #legal-list ol li:before {
   content: counter(section) "." counters(clause, ".") ". ";
   margin: 0 0.5em 0 0;
 }
-
-/* Forms */
-.node-type-webform .webform-client-form .form-item {
-  margin-top: 16px;
-  margin-bottom:6px;
-}
-.node-type-webform .webform-client-form .form-item .description {
-  color: #888;
-}
-.node-type-webform .webform-client-form .form-item .form-radios {
-  padding-left: 20px;
-}
-
-/** co-signers table **/
-.view-co-signers .views-table td.views-field-name {
-  min-width: 9em;
-} 
-
-.view-co-signers .views-table td.views-field-organisation {
-  min-width: 10em;
-}
-
-.view-co-signers .views-table td.views-field-submitted {
-  min-width: 9em;
-}
+*/
 
 /*=========================
   Icons - see http://bootsnipp.com/snippets/featured/spinning-social-icons
@@ -114,39 +226,4 @@ ul.social-network li, ul.credits li {
 
 .footer ul.credits li, .footer ul.social-network li {
   vertical-align: bottom;
-}
-
-.footer .row .footer-block {
-  margin-bottom: 1em;
-  text-align: center;
-}
-
-.region-sidebar-second .block:first-child {
-  margin-top: 71px;
-}
-
-.view-display-id-block_1 .view-header {
-  padding-bottom: 5px;
-  border-bottom: 1px solid #f8f5f0;
-  margin-bottom: 10px;
-}
-
-/* front page blocks */
-.region-sidebar-second .block-title {
-  font-size: 80%;
-  font-style: italic;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #f8f5f0;
-  margin-top: 10px;
-  margin-bottom: 0px;
-}
-
-.region-sidebar-second .node-teaser h2 {
-  margin-top: 0;
-  margin-bottom: 6px;
-  line-height: 0.8;
-}
-
-.region-sidebar-second .node-teaser h2 a {
-  font-size: 60%;
 }

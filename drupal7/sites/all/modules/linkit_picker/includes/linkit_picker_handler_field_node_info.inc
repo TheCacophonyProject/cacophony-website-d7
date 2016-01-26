@@ -8,15 +8,15 @@
 class linkit_picker_handler_field_node_info extends views_handler_field {
 
   function query() {
-    // Do nothing, as this handler does not need to do anything to the query itself.
+    _linkit_picker_set_active_profile();
   }
 
   function render($values) {
-    $nid = $values->nid;
-    $title = $values->node_title;
-    // $type = ucwords($values->node_type);
-    $value = $title . ' [path:node/' . $nid . ']';
-    return $value;
+    $value = array(
+      'path' => _linkit_picker_get_insert_plugin_processed_path('node/' . $values->nid),
+      'title' => $values->node_title
+    );
+    return drupal_json_encode($value);
   }
 
 }

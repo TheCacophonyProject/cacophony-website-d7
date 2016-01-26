@@ -8,14 +8,15 @@
 class linkit_picker_handler_field_user_info extends views_handler_field {
 
   function query() {
-    // Do nothing, as this handler does not need to do anything to the query itself.
+    _linkit_picker_set_active_profile();
   }
 
   function render($values) {
-    $uid = $values->uid;
-    $users_name = $values->users_name;
-    $value = $users_name . ' [path:user/' . $uid . ']';
-    return $value;
+    $value = array(
+      'path' => _linkit_picker_get_insert_plugin_processed_path('user/' . $values->uid),
+      'title' => $values->users_name
+    );
+    return drupal_json_encode($value);
   }
 
 }
