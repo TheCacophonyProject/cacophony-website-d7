@@ -1,6 +1,6 @@
 #!/bin/bash
-NEW='drupal-7.41'
-PREV='drupal-7.40'
+NEW='drupal-7.42'
+PREV='drupal-7.41'
 DRUP='drupal7'
 #
 # settings likely to be the same on a given server
