@@ -42,13 +42,13 @@ stylesheets[all][] = fonts/font-awesome/css/font-awesome.css
 ; ;;;;;;;;;;;;;;;;;;;;;
 ;
 ; scripts[] = 'js/affix.js'
-scripts[] = 'js/alert.js'
+;scripts[] = 'js/alert.js'
 scripts[] = 'js/bootstrap/button.js'
 scripts[] = 'js/bootstrap/carousel.js'
 scripts[] = 'js/bootstrap/collapse.js'
 ; scripts[] = 'js/bootstrap/dropdown.js'
-scripts[] = 'js/modal.js'
-scripts[] = 'js/tooltip.js'
+;scripts[] = 'js/modal.js'
+;scripts[] = 'js/tooltip.js'
 ; scripts[] = 'js/popover.js'
 ; scripts[] = 'js/scrollspy.js'
 ; scripts[] = 'js/tab.js'

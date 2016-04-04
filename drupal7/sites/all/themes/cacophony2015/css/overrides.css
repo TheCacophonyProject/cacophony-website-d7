@@ -60,11 +60,21 @@ section.fullwidth {
 /* Cacophonometer page */
 .page-node-50 .hero { background-image: url("../img/hero-help.jpg"); height: 360px; }
 /* Join the Project page */
-.page-node-51 .hero { background-image: url("../img/hero-projects.jpg"); height: 355px; }
+.page-node-51 .hero, .page-blog .hero { background-image: url("../img/hero-projects.jpg"); height: 355px; }
 /* contact page */
-.page-contact .hero { background-image: url("../img/hero-about.jpg"); height: 355px; }
+.page-contact .hero, .page-node-52 .hero { background-image: url("../img/hero-about.jpg"); height: 355px; }
 #contact-site-form {
   margin: 24px 0;
+}
+
+/* blog styles */
+.view-id-cacophony_blog_views .views-field-title {font-size: 1.5em;}
+.view-id-cacophony_blog_views .views-field-created {color: #999;}
+.view-id-cacophony_blog_views .views-field-body {}
+.view-id-cacophony_blog_views .view-content { padding: 1em 0 1em 0;}
+
+.view-id-cacophony_blog_views .views-row {
+  margin-bottom: 2em;
 }
 
 h1.page-header {
@@ -163,6 +173,16 @@ h1.page-header {
 
 /* login form */
 #user-login { width: 300px; }
+
+/* mailchimp footer stuff */
+#mc_embed_signup {
+  background: #555; 
+  color: #eee; 
+  clear: none; 
+  font-size: 80%; 
+  width:400px;
+}  
+#mc_embed_signup input { color: #222; }
 
 /* footer stuff */
 .footer {

@@ -160,6 +160,9 @@
       <?php if (!empty($action_links)): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>
+      <?php if (!$is_front): ?>
+        <section class="hero fullwidth"><!-- placeholder for background image, with title superimposed --></section>
+      <?php endif; ?>
       <?php print render($page['content']); ?>
     </section>
 
