@@ -184,6 +184,9 @@ h1.page-header {
 }  
 #mc_embed_signup input { color: #222; }
 
+/* add space at top of comments */
+#disqus_thread { margin-top: 4em; clear: both; }
+
 /* footer stuff */
 .footer {
   margin-top: 0px;
