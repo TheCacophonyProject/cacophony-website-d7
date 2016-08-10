@@ -35,6 +35,15 @@ section.fullwidth {
   color: #fff;
   margin-left: 24px;
 }
+#the-cacophony-project #opening-copy a {
+  color: #eee;
+}
+#the-cacophony-project #opening-copy a:visited {
+  color: #ddd;
+}
+#the-cacophony-project #opening-copy a:hover {
+  color: #000;
+}
 #listening-here { background-color: #ececec; }
 /*#first-project img { float: right; }*/
 
