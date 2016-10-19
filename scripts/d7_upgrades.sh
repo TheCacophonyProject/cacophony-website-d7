@@ -1,10 +1,10 @@
 #!/bin/bash
-NEW='drupal-7.44'
-PREV='drupal-7.43'
+NEW='drupal-7.50'
+PREV='drupal-7.44'
 DRUP='drupal7'
 #
 # settings likely to be the same on a given server
-USER="dave"
+USER="www-data"
 GROUP="dave"
 #
 # git pull
